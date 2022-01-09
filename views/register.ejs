@@ -1,0 +1,23 @@
+<%- include('header',{
+    title:'Kayıt Ekranı'
+}); -%>
+
+<div class="container">
+    <h1>Kayıt Ekranı</h1>
+    <form action="" method="POST">
+        <label for="user_name">İsim</label>
+        <input type="text" class="input" name="_name" autocomplete="off" id="user_name" placeholder="İsminizi Griniz">
+        <label for="user_email">E-mail</label>
+        <input type="email" class="input" name="_email" autocomplete="off" id="user_email" placeholder="E-mailinizi Giriniz">
+        <label for="user_pass">Şifre</label>
+        <input type="password" class="input" name="_password" id="user_pass" placeholder="Şifrenizi Giriniz">
+        <% if(typeof msg != 'undefined'){ %>
+        <div class="success-msg"><%= msg %></div><% }
+        if(typeof error !== 'undefined'){ %>
+        <div class="err-msg"><%= error %></div><% } %>
+        <input type="submit" value="Kayıt Ol">
+        <div class="link"><a href="./login">Giriş Yap</a></div>
+        <div class="link"><a href="/anasayfa">Anasayfa</a></div>
+    </form>
+</div>
+

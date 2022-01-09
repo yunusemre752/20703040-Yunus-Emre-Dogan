@@ -1,0 +1,21 @@
+<%- include('header',{
+    title:'Login'
+}); -%>
+
+<div class="container">
+    <h1>Giriş Ekranı</h1>
+    <form action="" method="POST">
+        <label for="user_email">E-mail</label>
+        <input type="email" class="input" name="_email" autocomplete="off" id="user_email" placeholder="E-mailinizi Giriniz">
+        <label for="user_pass">Şifre</label>
+        <input type="password" class="input" name="_password" id="user_pass" placeholder="Şifrenizi Giriniz">
+        <% if(typeof error !== 'undefined'){ %>
+        <div class="err-msg"><%= error %></div><% } %>
+        <input type="submit" value="Giriş Yap">
+        <div class="link"><a href="/signup">Kayıt ol</a></div>
+        <div class="link"><a href="/anasayfa">Anasayfa</a></div>
+    
+    </form> 
+</div>
+
+<%- include('footer'); -%>
